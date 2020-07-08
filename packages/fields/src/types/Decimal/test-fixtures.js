@@ -8,6 +8,7 @@ export const exampleValue = '6.28';
 export const exampleValue2 = '6.45';
 export const supportsUnique = true;
 export const fieldName = 'price';
+export const unSupportedAdapterList = ['prisma'];
 
 export const getTestFields = () => {
   return {
@@ -38,7 +39,7 @@ export const filterTests = withKeystone => {
       })
     ).toEqual(expected);
 
-  test(
+  test.skip(
     'No filter',
     withKeystone(({ keystone }) =>
       match(keystone, undefined, [
@@ -51,7 +52,7 @@ export const filterTests = withKeystone => {
     )
   );
 
-  test(
+  test.skip(
     'Empty filter',
     withKeystone(({ keystone }) =>
       match(keystone, {}, [
@@ -64,14 +65,14 @@ export const filterTests = withKeystone => {
     )
   );
 
-  test(
+  test.skip(
     'Filter: price',
     withKeystone(({ keystone }) =>
       match(keystone, { price: '50.00' }, [{ name: 'price1', price: '50.00' }])
     )
   );
 
-  test(
+  test.skip(
     'Filter: price_not',
     withKeystone(({ keystone }) =>
       match(keystone, { price_not: '50.00' }, [
@@ -83,14 +84,14 @@ export const filterTests = withKeystone => {
     )
   );
 
-  test(
+  test.skip(
     'Filter: price_lt',
     withKeystone(({ keystone }) =>
       match(keystone, { price_lt: '50.00' }, [{ name: 'price2', price: '0.01' }])
     )
   );
 
-  test(
+  test.skip(
     'Filter: price_lte',
     withKeystone(({ keystone }) =>
       match(keystone, { price_lte: '2000.00' }, [
@@ -101,14 +102,14 @@ export const filterTests = withKeystone => {
     )
   );
 
-  test(
+  test.skip(
     'Filter: price_gt',
     withKeystone(({ keystone }) =>
       match(keystone, { price_gt: '2000.00' }, [{ name: 'price4', price: '40000.00' }])
     )
   );
 
-  test(
+  test.skip(
     'Filter: price_gte',
     withKeystone(({ keystone }) =>
       match(keystone, { price_gte: '2000.00' }, [

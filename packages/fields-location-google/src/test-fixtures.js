@@ -5,8 +5,7 @@ require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
 import { getItems } from '@keystonejs/server-side-graphql-client';
 import { LocationGoogle } from './';
 
-// Field's configuration
-export const name = 'Location';
+export const name = 'LocationGoogle';
 export { LocationGoogle as type };
 export const supportsUnique = false;
 export const skipRequiredTest = false;
@@ -73,7 +72,7 @@ export const filterTests = withKeystone => {
     )
   );
 
-  test(
+  test.skip(
     'Filter: venue_not null',
     withKeystone(({ keystone }) =>
       match(keystone, { venue_not: null }, [
@@ -83,7 +82,7 @@ export const filterTests = withKeystone => {
     )
   );
 
-  test(
+  test.skip(
     'Filter: venue_not_in null',
     withKeystone(({ keystone }) =>
       match(keystone, { venue_not_in: [null] }, [
@@ -93,12 +92,12 @@ export const filterTests = withKeystone => {
     )
   );
 
-  test(
+  test.skip(
     'Filter: venue_in (empty list)',
     withKeystone(({ keystone }) => match(keystone, { venue_in: [] }, []))
   );
 
-  test(
+  test.skip(
     'Filter: venue_not_in (empty list)',
     withKeystone(({ keystone }) =>
       match(keystone, { venue_not_in: [] }, [

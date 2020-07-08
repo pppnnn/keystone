@@ -251,6 +251,7 @@ export const filterTests = withKeystone => {
     `Filter: {key}_in (case-sensitive, empty list)`,
     withKeystone(({ keystone }) => match(keystone, { text_in: [] }, []))
   );
+
   test(
     `Filter: {key}_in (case-sensitive)`,
     withKeystone(({ keystone }) =>

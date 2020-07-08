@@ -13,7 +13,7 @@ export const fieldName = 'portfolio';
 export const subfieldName = 'originalUrl';
 
 const iframelyAdapter = new IframelyOEmbedAdapter({
-  apiKey: process.env.IFRAMELY_API_KEY,
+  apiKey: process.env.IFRAMELY_API_KEY || 'placeholder',
 });
 
 export const fieldConfig = { adapter: iframelyAdapter };

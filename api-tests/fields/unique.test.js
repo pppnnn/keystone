@@ -3,7 +3,7 @@ const { Text } = require('@keystonejs/fields');
 const { multiAdapterRunners, setupServer } = require('@keystonejs/test-utils');
 
 const testModules = globby.sync(`packages/**/src/**/test-fixtures.js`, { absolute: true });
-multiAdapterRunners().map(({ runner, adapterName, after }) =>
+multiAdapterRunners('prisma').map(({ runner, adapterName, after }) =>
   describe(`Adapter: ${adapterName}`, () => {
     testModules
       .map(require)
@@ -11,6 +11,7 @@ multiAdapterRunners().map(({ runner, adapterName, after }) =>
         ({ supportsUnique, unSupportedAdapterList = [] }) =>
           supportsUnique && !unSupportedAdapterList.includes(adapterName)
       )
+      // .filter(({ name }) => name === 'LocationGoogle')
       .forEach(mod => {
         describe(`${mod.name} - isUnique`, () => {
           const keystoneTestWrapper = testFn =>
@@ -61,7 +62,9 @@ multiAdapterRunners().map(({ runner, adapterName, after }) =>
 
               expect(errors2).toHaveProperty('0.message');
               expect(errors2[0].message).toEqual(
-                expect.stringMatching(/duplicate key|to be unique/)
+                expect.stringMatching(
+                  /duplicate key|to be unique|Unique constraint failed on the fields/
+                )
               );
             })
           );
@@ -88,7 +91,9 @@ multiAdapterRunners().map(({ runner, adapterName, after }) =>
 
               expect(errors).toHaveProperty('0.message');
               expect(errors[0].message).toEqual(
-                expect.stringMatching(/duplicate key|to be unique/)
+                expect.stringMatching(
+                  /duplicate key|to be unique|Unique constraint failed on the fields/
+                )
               );
             })
           );
@@ -126,6 +131,7 @@ multiAdapterRunners().map(({ runner, adapterName, after }) =>
     testModules
       .map(require)
       .filter(({ supportsUnique }) => !supportsUnique)
+      // .filter(({ name }) => name === 'LocationGoogle')
       .forEach(mod => {
         describe(`${mod.name} - isUnique`, () => {
           test('Ensure non-supporting fields throw an error', async () => {
