@@ -3,7 +3,7 @@ import { Text } from '@keystonejs/fields';
 import { AutoIncrement } from './index';
 
 export const name = 'AutoIncrement';
-export { AutoIncrement as type };
+export const type = AutoIncrement;
 export const exampleValue = 35;
 export const exampleValue2 = 36;
 export const supportsUnique = true;
@@ -17,15 +17,10 @@ export const unSupportedAdapterList = ['mongoose'];
 // Be default, `AutoIncrement` are read-only. But for `isRequired` test purpose, we need to bypass these restrictions.
 export const fieldConfig = { access: { create: true, update: true } };
 
-export const getTestFields = () => {
-  return {
-    name: { type: Text },
-    orderNumber: {
-      type: AutoIncrement,
-      gqlType: 'Int',
-    },
-  };
-};
+export const getTestFields = () => ({
+  name: { type: Text },
+  orderNumber: { type, gqlType: 'Int' },
+});
 
 export const initItems = () => {
   return [
@@ -34,8 +29,28 @@ export const initItems = () => {
     { name: 'product3' },
     { name: 'product4' },
     { name: 'product5' },
+    { name: 'product6' },
+    { name: 'product7' },
   ];
 };
+
+export const storedValues = [
+  { name: 'product1', orderNumber: 1 },
+  { name: 'product2', orderNumber: 2 },
+  { name: 'product3', orderNumber: 3 },
+  { name: 'product4', orderNumber: 4 },
+  { name: 'product5', orderNumber: 5 },
+  { name: 'product6', orderNumber: 6 },
+  { name: 'product7', orderNumber: 7 },
+];
+
+export const supportedFilters = [
+  'null_equality',
+  'equality',
+  'in_empty_null',
+  'in_value',
+  'ordering',
+];
 
 export const filterTests = withKeystone => {
   const match = async (keystone, where, expected) =>
@@ -48,51 +63,6 @@ export const filterTests = withKeystone => {
         sortBy: 'name_ASC',
       })
     ).toEqual(expected);
-
-  test(
-    'No filter',
-    withKeystone(({ keystone }) =>
-      match(keystone, undefined, [
-        { name: 'product1', orderNumber: 1 },
-        { name: 'product2', orderNumber: 2 },
-        { name: 'product3', orderNumber: 3 },
-        { name: 'product4', orderNumber: 4 },
-        { name: 'product5', orderNumber: 5 },
-      ])
-    )
-  );
-
-  test(
-    'Empty filter',
-    withKeystone(({ keystone }) =>
-      match(keystone, {}, [
-        { name: 'product1', orderNumber: 1 },
-        { name: 'product2', orderNumber: 2 },
-        { name: 'product3', orderNumber: 3 },
-        { name: 'product4', orderNumber: 4 },
-        { name: 'product5', orderNumber: 5 },
-      ])
-    )
-  );
-
-  test(
-    'Filter: orderNumber',
-    withKeystone(({ keystone }) =>
-      match(keystone, { orderNumber: 1 }, [{ name: 'product1', orderNumber: 1 }])
-    )
-  );
-
-  test(
-    'Filter: orderNumber_not',
-    withKeystone(({ keystone }) =>
-      match(keystone, { orderNumber_not: 1 }, [
-        { name: 'product2', orderNumber: 2 },
-        { name: 'product3', orderNumber: 3 },
-        { name: 'product4', orderNumber: 4 },
-        { name: 'product5', orderNumber: 5 },
-      ])
-    )
-  );
 
   test(
     'Filter: orderNumber_not null',

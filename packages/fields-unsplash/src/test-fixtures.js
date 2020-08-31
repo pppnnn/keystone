@@ -5,7 +5,7 @@ import { Unsplash } from './';
 
 // Field configurations
 export const name = 'Unsplash';
-export { Unsplash as type };
+export const type = Unsplash;
 export const supportsUnique = false;
 export const skipRequiredTest = false;
 export const exampleValue = 'U0tBTn8UR8I';
@@ -13,20 +13,18 @@ export const exampleValue2 = 'xrVDYZRGdw4';
 export const fieldName = 'heroImage';
 export const subfieldName = 'unsplashId';
 export const fieldConfig = {
-  accessKey: process.env.UNSPLASH_KEY,
-  secretKey: process.env.UNSPLASH_SECRET,
+  accessKey: process.env.UNSPLASH_KEY || 'unsplash_key',
+  secretKey: process.env.UNSPLASH_SECRET || 'unplash_secret',
 };
 
-export const getTestFields = () => {
-  return {
-    name: { type: String },
-    heroImage: {
-      type: Unsplash,
-      accessKey: process.env.UNSPLASH_KEY,
-      secretKey: process.env.UNSPLASH_SECRET,
-    },
-  };
-};
+export const getTestFields = () => ({
+  name: { type: String },
+  heroImage: {
+    type,
+    accessKey: process.env.UNSPLASH_KEY || 'unsplash_key',
+    secretKey: process.env.UNSPLASH_SECRET || 'unplash_secret',
+  },
+});
 
 export const initItems = () => {
   return [
@@ -36,6 +34,8 @@ export const initItems = () => {
     { name: 'd' },
   ];
 };
+
+export const supportedFilters = ['null_equality', 'equality', 'in_empty_null', 'in_equal'];
 
 export const filterTests = withKeystone => {
   const match = async (keystone, where, expected, sortBy = 'name_ASC') =>

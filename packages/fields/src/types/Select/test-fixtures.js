@@ -3,8 +3,7 @@ import Select from './';
 import Text from '../Text';
 
 export const name = 'Select';
-
-export { Select as type };
+export const type = Select;
 export const exampleValue = 'thinkmill';
 export const exampleValue2 = 'atlassian';
 export const supportsUnique = true;
@@ -21,7 +20,7 @@ export const getTestFields = () => {
   return {
     name: { type: Text }, // Provide a field to sort on
     company: {
-      type: Select,
+      type,
       dataType: 'enum',
       options: [
         { label: 'Thinkmill', value: 'thinkmill' },
@@ -31,7 +30,7 @@ export const getTestFields = () => {
       ],
     },
     selectString: {
-      type: Select,
+      type,
       dataType: 'string',
       options: [
         { label: 'A string', value: 'a string' },
@@ -40,7 +39,7 @@ export const getTestFields = () => {
       ],
     },
     selectNumber: {
-      type: Select,
+      type,
       dataType: 'integer',
       options: [
         { label: 'One', value: 1 },
