@@ -97,7 +97,7 @@ export const filterTests = withKeystone => {
     )
   );
 
-  test(
+  test.skip(
     'Filter: portfolio_not_in null',
     withKeystone(({ keystone }) =>
       match(keystone, { portfolio_not_in: [null] }, [
@@ -112,12 +112,12 @@ export const filterTests = withKeystone => {
     )
   );
 
-  test(
+  test.skip(
     'Filter: portfolio_in (empty list)',
     withKeystone(({ keystone }) => match(keystone, { portfolio_in: [] }, []))
   );
 
-  test(
+  test.skip(
     'Filter: portfolio_not_in (empty list)',
     withKeystone(({ keystone }) =>
       match(keystone, { portfolio_not_in: [] }, [
