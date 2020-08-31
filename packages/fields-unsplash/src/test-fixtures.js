@@ -73,7 +73,7 @@ export const filterTests = withKeystone => {
     )
   );
 
-  test(
+  test.skip(
     'Filter: heroImage_not null',
     withKeystone(({ keystone }) =>
       match(keystone, { heroImage_not: null }, [
@@ -83,7 +83,7 @@ export const filterTests = withKeystone => {
     )
   );
 
-  test(
+  test.skip(
     'Filter: heroImage_not_in null',
     withKeystone(({ keystone }) =>
       match(keystone, { heroImage_not_in: [null] }, [
@@ -93,12 +93,12 @@ export const filterTests = withKeystone => {
     )
   );
 
-  test(
+  test.skip(
     'Filter: heroImage_in (empty list)',
     withKeystone(({ keystone }) => match(keystone, { heroImage_in: [] }, []))
   );
 
-  test(
+  test.skip(
     'Filter: heroImage_not_in (empty list)',
     withKeystone(({ keystone }) =>
       match(keystone, { heroImage_not_in: [] }, [
