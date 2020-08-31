@@ -82,7 +82,7 @@ export const filterTests = withKeystone => {
     )
   );
 
-  test(
+  test.skip(
     'Filter: portfolio_not null',
     withKeystone(({ keystone }) =>
       match(keystone, { portfolio_not: null }, [
