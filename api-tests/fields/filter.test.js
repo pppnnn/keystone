@@ -19,9 +19,7 @@ multiAdapterRunners('knex').map(({ runner, adapterName }) =>
       // .filter(({ name }) => name === 'Password')
       .filter(
         ({ name }) =>
-          !['Unsplash', 'Select', 'Uuid', 'OEmbed', 'AutoIncrement', 'File'].includes(
-            name
-          )
+          !['Unsplash', 'Select', 'Uuid', 'OEmbed', 'AutoIncrement', 'File'].includes(name)
       )
       .forEach(mod => {
         const listKey = 'Test';
