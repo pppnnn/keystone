@@ -1,5 +1,11 @@
 # @keystonejs/apollo-helpers
 
+## 5.1.7
+
+### Patch Changes
+
+- [`729e897e6`](https://github.com/keystonejs/keystone/commit/729e897e689f2673f38d6c0caf22e7cee7ee8ff3) [#3496](https://github.com/keystonejs/keystone/pull/3496) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `^16.9.48`.
+
 ## 5.1.6
 
 ### Patch Changes

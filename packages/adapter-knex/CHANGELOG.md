@@ -1,5 +1,16 @@
 # @keystonejs/adapter-knex
 
+## 11.0.4
+
+### Patch Changes
+
+- [`e9bc4367a`](https://github.com/keystonejs/keystone/commit/e9bc4367ac31f3fe3a2898198c600c76c42165b2) [#3513](https://github.com/keystonejs/keystone/pull/3513) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `knex` to `^0.21.5`.
+
+* [`003b856e6`](https://github.com/keystonejs/keystone/commit/003b856e686cc1ee0f984c1acf024c1fa0c27837) [#3526](https://github.com/keystonejs/keystone/pull/3526) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `pg` to `^8.3.3`.
+
+* Updated dependencies [[`cd15192cd`](https://github.com/keystonejs/keystone/commit/cd15192cdae5e476f64a257c196ca569a9440d5a), [`d71f98791`](https://github.com/keystonejs/keystone/commit/d71f987917509a206b1e0a994dbc6641a7cf4e06), [`28b88abd3`](https://github.com/keystonejs/keystone/commit/28b88abd369f0df12eae72107db7c24323eda4b5)]:
+  - @keystonejs/keystone@14.0.2
+
 ## 11.0.3
 
 ### Patch Changes

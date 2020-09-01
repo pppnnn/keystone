@@ -1,5 +1,31 @@
 # @keystonejs/cypress-project-basic
 
+## 6.0.9
+
+### Patch Changes
+
+- [`39145cf53`](https://github.com/keystonejs/keystone/commit/39145cf53888e33772323dc6749b6564391b0e0b) [#3515](https://github.com/keystonejs/keystone/pull/3515) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `mocha` to `^7.2.0`.
+
+* [`31959b7cd`](https://github.com/keystonejs/keystone/commit/31959b7cd61725b27cfdc5191c3237bead363eaf) [#3483](https://github.com/keystonejs/keystone/pull/3483) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `cypress-multi-reporters` to `^1.4.0`.
+
+- [`cd15192cd`](https://github.com/keystonejs/keystone/commit/cd15192cdae5e476f64a257c196ca569a9440d5a) [#3510](https://github.com/keystonejs/keystone/pull/3510) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `graphql` to `^14.7.0`.
+
+* [`5bed4db02`](https://github.com/keystonejs/keystone/commit/5bed4db0265e79569d60ee34afaa90169a581b58) [#3482](https://github.com/keystonejs/keystone/pull/3482) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `cypress-file-upload` to `^3.5.3`.
+
+- [`a42ee3a30`](https://github.com/keystonejs/keystone/commit/a42ee3a306c899a7ae46909fe132522cbeff7812) [#3508](https://github.com/keystonejs/keystone/pull/3508) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `date-fns` to `^2.16.1`.
+
+* [`98c8dbf4e`](https://github.com/keystonejs/keystone/commit/98c8dbf4ef722aad6eb27197722aa9d0ac169a93) [#3480](https://github.com/keystonejs/keystone/pull/3480) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `cypress` to `^4.12.1`.
+
+* Updated dependencies [[`cd15192cd`](https://github.com/keystonejs/keystone/commit/cd15192cdae5e476f64a257c196ca569a9440d5a), [`5fb75bab6`](https://github.com/keystonejs/keystone/commit/5fb75bab638c59ccf690c46d862b9801bf1d28f6), [`7fb51fba4`](https://github.com/keystonejs/keystone/commit/7fb51fba4682ded82df99330b4fe69b8bad0a2ce), [`729e897e6`](https://github.com/keystonejs/keystone/commit/729e897e689f2673f38d6c0caf22e7cee7ee8ff3), [`743646a59`](https://github.com/keystonejs/keystone/commit/743646a59c91d02d09000bb21c80e6311bc12645), [`40b751ad6`](https://github.com/keystonejs/keystone/commit/40b751ad6f09aec137ef42df10fdbb1240173afb), [`e62b3308b`](https://github.com/keystonejs/keystone/commit/e62b3308bd841b5f58ac9fa1f84707f9187fda6b), [`a42ee3a30`](https://github.com/keystonejs/keystone/commit/a42ee3a306c899a7ae46909fe132522cbeff7812), [`d71f98791`](https://github.com/keystonejs/keystone/commit/d71f987917509a206b1e0a994dbc6641a7cf4e06), [`438051442`](https://github.com/keystonejs/keystone/commit/4380514421020f4418a9f966c9fec60e014478b9), [`28b88abd3`](https://github.com/keystonejs/keystone/commit/28b88abd369f0df12eae72107db7c24323eda4b5)]:
+  - @keystonejs/app-admin-ui@7.3.4
+  - @keystonejs/app-graphql@6.1.2
+  - @keystonejs/fields@17.1.1
+  - @keystonejs/keystone@14.0.2
+  - @keystonejs/file-adapters@7.0.5
+  - @keystonejs/fields-cloudinary-image@1.0.4
+  - @keystonejs/fields-oembed@2.1.1
+  - @keystonejs/fields-unsplash@2.1.1
+
 ## 6.0.8
 
 ### Patch Changes

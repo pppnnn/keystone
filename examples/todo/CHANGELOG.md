@@ -1,5 +1,17 @@
 # @keystonejs/demo-project-todo
 
+## 5.1.17
+
+### Patch Changes
+
+- [`639a11f75`](https://github.com/keystonejs/keystone/commit/639a11f75e6667b421624875ecd312a9fbf87abe) [#3534](https://github.com/keystonejs/keystone/pull/3534) Thanks [@MadeByMike](https://github.com/MadeByMike)! - Renamed `demo-projects` folder to `examples` to allow for future smaller focused examples.
+
+- Updated dependencies [[`cd15192cd`](https://github.com/keystonejs/keystone/commit/cd15192cdae5e476f64a257c196ca569a9440d5a), [`5fb75bab6`](https://github.com/keystonejs/keystone/commit/5fb75bab638c59ccf690c46d862b9801bf1d28f6), [`729e897e6`](https://github.com/keystonejs/keystone/commit/729e897e689f2673f38d6c0caf22e7cee7ee8ff3), [`40b751ad6`](https://github.com/keystonejs/keystone/commit/40b751ad6f09aec137ef42df10fdbb1240173afb), [`e62b3308b`](https://github.com/keystonejs/keystone/commit/e62b3308bd841b5f58ac9fa1f84707f9187fda6b), [`a42ee3a30`](https://github.com/keystonejs/keystone/commit/a42ee3a306c899a7ae46909fe132522cbeff7812), [`d71f98791`](https://github.com/keystonejs/keystone/commit/d71f987917509a206b1e0a994dbc6641a7cf4e06), [`438051442`](https://github.com/keystonejs/keystone/commit/4380514421020f4418a9f966c9fec60e014478b9), [`28b88abd3`](https://github.com/keystonejs/keystone/commit/28b88abd369f0df12eae72107db7c24323eda4b5)]:
+  - @keystonejs/app-admin-ui@7.3.4
+  - @keystonejs/app-graphql@6.1.2
+  - @keystonejs/fields@17.1.1
+  - @keystonejs/keystone@14.0.2
+
 ## 5.1.16
 
 ### Patch Changes

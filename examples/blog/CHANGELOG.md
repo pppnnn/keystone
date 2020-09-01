@@ -1,5 +1,27 @@
 # keystone_demo_blog
 
+## 6.2.3
+
+### Patch Changes
+
+- [`cd15192cd`](https://github.com/keystonejs/keystone/commit/cd15192cdae5e476f64a257c196ca569a9440d5a) [#3510](https://github.com/keystonejs/keystone/pull/3510) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `graphql` to `^14.7.0`.
+
+* [`e62b3308b`](https://github.com/keystonejs/keystone/commit/e62b3308bd841b5f58ac9fa1f84707f9187fda6b) [#3524](https://github.com/keystonejs/keystone/pull/3524) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `node-fetch` to `^2.6.0`.
+
+- [`a42ee3a30`](https://github.com/keystonejs/keystone/commit/a42ee3a306c899a7ae46909fe132522cbeff7812) [#3508](https://github.com/keystonejs/keystone/pull/3508) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `date-fns` to `^2.16.1`.
+
+* [`639a11f75`](https://github.com/keystonejs/keystone/commit/639a11f75e6667b421624875ecd312a9fbf87abe) [#3534](https://github.com/keystonejs/keystone/pull/3534) Thanks [@MadeByMike](https://github.com/MadeByMike)! - Renamed `demo-projects` folder to `examples` to allow for future smaller focused examples.
+
+- [`28b88abd3`](https://github.com/keystonejs/keystone/commit/28b88abd369f0df12eae72107db7c24323eda4b5) [#3507](https://github.com/keystonejs/keystone/pull/3507) Thanks [@renovate](https://github.com/apps/renovate)! - Updated Apollo GraphQL packages dependencies.
+
+- Updated dependencies [[`cd15192cd`](https://github.com/keystonejs/keystone/commit/cd15192cdae5e476f64a257c196ca569a9440d5a), [`5fb75bab6`](https://github.com/keystonejs/keystone/commit/5fb75bab638c59ccf690c46d862b9801bf1d28f6), [`7fb51fba4`](https://github.com/keystonejs/keystone/commit/7fb51fba4682ded82df99330b4fe69b8bad0a2ce), [`729e897e6`](https://github.com/keystonejs/keystone/commit/729e897e689f2673f38d6c0caf22e7cee7ee8ff3), [`743646a59`](https://github.com/keystonejs/keystone/commit/743646a59c91d02d09000bb21c80e6311bc12645), [`40b751ad6`](https://github.com/keystonejs/keystone/commit/40b751ad6f09aec137ef42df10fdbb1240173afb), [`e62b3308b`](https://github.com/keystonejs/keystone/commit/e62b3308bd841b5f58ac9fa1f84707f9187fda6b), [`a42ee3a30`](https://github.com/keystonejs/keystone/commit/a42ee3a306c899a7ae46909fe132522cbeff7812), [`d71f98791`](https://github.com/keystonejs/keystone/commit/d71f987917509a206b1e0a994dbc6641a7cf4e06), [`438051442`](https://github.com/keystonejs/keystone/commit/4380514421020f4418a9f966c9fec60e014478b9), [`28b88abd3`](https://github.com/keystonejs/keystone/commit/28b88abd369f0df12eae72107db7c24323eda4b5)]:
+  - @keystonejs/app-admin-ui@7.3.4
+  - @keystonejs/app-graphql@6.1.2
+  - @keystonejs/fields@17.1.1
+  - @keystonejs/keystone@14.0.2
+  - @keystonejs/file-adapters@7.0.5
+  - @keystonejs/fields-oembed@2.1.1
+
 ## 6.2.2
 
 ### Patch Changes

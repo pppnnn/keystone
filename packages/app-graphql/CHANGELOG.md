@@ -1,5 +1,11 @@
 # @keystonejs/app-graphql
 
+## 6.1.2
+
+### Patch Changes
+
+- [`cd15192cd`](https://github.com/keystonejs/keystone/commit/cd15192cdae5e476f64a257c196ca569a9440d5a) [#3510](https://github.com/keystonejs/keystone/pull/3510) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `graphql` to `^14.7.0`.
+
 ## 6.1.1
 
 ### Patch Changes

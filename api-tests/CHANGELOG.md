@@ -1,5 +1,14 @@
 # @keystonejs/api-tests
 
+## 7.0.5
+
+### Patch Changes
+
+- [`2d0099733`](https://github.com/keystonejs/keystone/commit/2d0099733648c056fb64d79d7f07727bfb30762a) [#3509](https://github.com/keystonejs/keystone/pull/3509) Thanks [@timleslie](https://github.com/timleslie)! - Removed unused dependencies.
+
+- Updated dependencies [[`cd15192cd`](https://github.com/keystonejs/keystone/commit/cd15192cdae5e476f64a257c196ca569a9440d5a), [`e62b3308b`](https://github.com/keystonejs/keystone/commit/e62b3308bd841b5f58ac9fa1f84707f9187fda6b), [`a42ee3a30`](https://github.com/keystonejs/keystone/commit/a42ee3a306c899a7ae46909fe132522cbeff7812), [`438051442`](https://github.com/keystonejs/keystone/commit/4380514421020f4418a9f966c9fec60e014478b9), [`28b88abd3`](https://github.com/keystonejs/keystone/commit/28b88abd369f0df12eae72107db7c24323eda4b5)]:
+  - @keystonejs/fields@17.1.1
+
 ## 7.0.4
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @keystonejs/file-adapters
 
+## 7.0.5
+
+### Patch Changes
+
+- [`7fb51fba4`](https://github.com/keystonejs/keystone/commit/7fb51fba4682ded82df99330b4fe69b8bad0a2ce) [#3490](https://github.com/keystonejs/keystone/pull/3490) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `cloudinary` to `^1.23.0`.
+
+* [`743646a59`](https://github.com/keystonejs/keystone/commit/743646a59c91d02d09000bb21c80e6311bc12645) [#3498](https://github.com/keystonejs/keystone/pull/3498) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `aws-sdk` to `^2.743.0`.
+
 ## 7.0.4
 
 ### Patch Changes

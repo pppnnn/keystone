@@ -1,5 +1,15 @@
 # @keystonejs/website
 
+## 5.3.9
+
+### Patch Changes
+
+- [`94aaa1b39`](https://github.com/keystonejs/keystone/commit/94aaa1b3983e3ac55f76b98ef43f29eb12553c5e) [#3471](https://github.com/keystonejs/keystone/pull/3471) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@reach/skip-nav` to `^0.10.5`.
+
+* [`8c3f8a9aa`](https://github.com/keystonejs/keystone/commit/8c3f8a9aa48a80906a4972c721e657344e152e8c) [#3502](https://github.com/keystonejs/keystone/pull/3502) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `gatsby-remark-check-links` to `^2.1.0`.
+
+- [`b2bd202c5`](https://github.com/keystonejs/keystone/commit/b2bd202c5b9997e62fe212472188ee3eba8e79b5) [#3503](https://github.com/keystonejs/keystone/pull/3503) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `get-workspaces` to `^0.5.2`.
+
 ## 5.3.8
 
 ### Patch Changes
