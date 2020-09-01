@@ -16,18 +16,12 @@ multiAdapterRunners('knex').map(({ runner, adapterName }) =>
         ({ skipCrudTest, unSupportedAdapterList = [] }) =>
           !skipCrudTest && !unSupportedAdapterList.includes(adapterName)
       )
-      // .filter(({ name }) => name === 'Checkbox')
+      // .filter(({ name }) => name === 'Password')
       .filter(
         ({ name }) =>
-          ![
-            'Unsplash',
-            'Select',
-            'Uuid',
-            'OEmbed',
-            'AutoIncrement',
-            'File',
-            'Password',
-          ].includes(name)
+          !['Unsplash', 'Select', 'Uuid', 'OEmbed', 'AutoIncrement', 'File'].includes(
+            name
+          )
       )
       .forEach(mod => {
         const listKey = 'Test';
@@ -382,6 +376,24 @@ multiAdapterRunners('knex').map(({ runner, adapterName }) =>
                   },
                   [storedValues[1], storedValues[3], storedValues[5], storedValues[6]]
                 )
+              )
+            );
+          }
+          if (mod.supportedFilters.includes('is_set')) {
+            test(
+              'Is Set - true',
+              withKeystone(({ keystone }) =>
+                match(keystone, { [`${fieldName}_is_set`]: true }, [
+                  storedValues[0],
+                  storedValues[2],
+                ])
+              )
+            );
+
+            test(
+              'Is Set - false',
+              withKeystone(({ keystone }) =>
+                match(keystone, { [`${fieldName}_is_set`]: false }, [storedValues[1]])
               )
             );
           }

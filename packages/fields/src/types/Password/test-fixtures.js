@@ -1,4 +1,3 @@
-import { getItems } from '@keystonejs/server-side-graphql-client';
 import Password from './';
 import Text from '../Text';
 
@@ -28,56 +27,4 @@ export const storedValues = [
   { name: 'person3', password_is_set: true },
 ];
 
-export const supportedFilters = [];
-
-export const filterTests = withKeystone => {
-  const match = async (keystone, where, expected) =>
-    expect(
-      await getItems({
-        keystone,
-        listKey: 'Test',
-        where,
-        returnFields: 'name password_is_set',
-        sortBy: 'name_ASC',
-      })
-    ).toEqual(expected);
-
-  test(
-    'No filter',
-    withKeystone(({ keystone }) =>
-      match(keystone, undefined, [
-        { name: 'person1', password_is_set: true },
-        { name: 'person2', password_is_set: false },
-        { name: 'person3', password_is_set: true },
-      ])
-    )
-  );
-
-  test(
-    'Empty filter',
-    withKeystone(({ keystone }) =>
-      match(keystone, {}, [
-        { name: 'person1', password_is_set: true },
-        { name: 'person2', password_is_set: false },
-        { name: 'person3', password_is_set: true },
-      ])
-    )
-  );
-
-  test(
-    'Filter: is_set - true',
-    withKeystone(({ keystone }) =>
-      match(keystone, { password_is_set: true }, [
-        { name: 'person1', password_is_set: true },
-        { name: 'person3', password_is_set: true },
-      ])
-    )
-  );
-
-  test(
-    'Filter: is_set - false',
-    withKeystone(({ keystone }) =>
-      match(keystone, { password_is_set: false }, [{ name: 'person2', password_is_set: false }])
-    )
-  );
-};
+export const supportedFilters = ['is_set'];
